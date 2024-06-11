@@ -8,8 +8,8 @@
 import Foundation
 
 //Identifiable allows us to do away if defining an id in the foreach loop. 
-struct ExpenseItem: Identifiable{
-    let id = UUID()
+struct ExpenseItem: Identifiable, Codable{
+    var id = UUID()
     let name: String
     let type: String
     let amount: Double
