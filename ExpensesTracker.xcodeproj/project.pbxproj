@@ -13,6 +13,7 @@
 		94D9300B2C18C43C00E83400 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94D9300A2C18C43C00E83400 /* Preview Assets.xcassets */; };
 		94D930122C18C55600E83400 /* ExpenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D930112C18C55600E83400 /* ExpenseItem.swift */; };
 		94D930142C18C5CD00E83400 /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D930132C18C5CD00E83400 /* Expenses.swift */; };
+		94D930162C18CCFD00E83400 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D930152C18CCFD00E83400 /* AddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		94D9300A2C18C43C00E83400 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		94D930112C18C55600E83400 /* ExpenseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseItem.swift; sourceTree = "<group>"; };
 		94D930132C18C5CD00E83400 /* Expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
+		94D930152C18CCFD00E83400 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				94D930032C18C43B00E83400 /* ExpensesTrackerApp.swift */,
 				94D930052C18C43B00E83400 /* ContentView.swift */,
+				94D930152C18CCFD00E83400 /* AddView.swift */,
 				94D930112C18C55600E83400 /* ExpenseItem.swift */,
 				94D930132C18C5CD00E83400 /* Expenses.swift */,
 				94D930072C18C43C00E83400 /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 			files = (
 				94D930142C18C5CD00E83400 /* Expenses.swift in Sources */,
 				94D930062C18C43B00E83400 /* ContentView.swift in Sources */,
+				94D930162C18CCFD00E83400 /* AddView.swift in Sources */,
 				94D930122C18C55600E83400 /* ExpenseItem.swift in Sources */,
 				94D930042C18C43B00E83400 /* ExpensesTrackerApp.swift in Sources */,
 			);

@@ -10,12 +10,14 @@ import SwiftUI
 struct ContentView: View {
     //@stateObjects keeps an eye on those published variables of a class, any change that happens will reflected on the view.
     //Remember a normal state does not work on a class you need a stateObject
+    //In content view we are creating the object so we use the @Stateobject
     @StateObject var expenses = Expenses()
+    @State private var showingAddExpense = false
     
     var body: some View {
         NavigationView{
             List{
-                ForEach(expenses.items, id: \.name) {item in
+                ForEach(expenses.items) {item in
                     Text(item.name)
                 }
                 .onDelete(perform: removeItems)
@@ -23,11 +25,13 @@ struct ContentView: View {
             .navigationTitle("iExpense")
             .toolbar {
                 Button{
-                    let expense = ExpenseItem(name: "Test", type: "Personal", amount: 5)
-                    expenses.items.append(expense)
+                  showingAddExpense = true
                 }label: {
                    Image(systemName: "plus")
                 }
+            }
+            .sheet(isPresented: $showingAddExpense){
+                AddView(expenses: expenses)
             }
         }
     }

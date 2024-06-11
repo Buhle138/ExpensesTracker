@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct ExpenseItem {
+//Identifiable allows us to do away if defining an id in the foreach loop. 
+struct ExpenseItem: Identifiable{
+    let id = UUID()
     let name: String
     let type: String
     let amount: Double
