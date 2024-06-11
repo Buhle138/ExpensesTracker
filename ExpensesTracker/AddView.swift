@@ -12,6 +12,7 @@ struct AddView: View {
     //We are using the @ObservedObject because at this point the object is already created in the content view
     //In content view we are creating the object so we use the @Stateobject
     @ObservedObject var expenses: Expenses
+    @Environment(\.dismiss) var dismiss
     @State private var name = ""
     @State private var type = "Personal"
     @State private var amount = 0.0
@@ -37,6 +38,7 @@ struct AddView: View {
                 Button("Save"){
                     let item = ExpenseItem(name: name, type: type, amount: amount)
                     expenses.items.append(item)
+                    dismiss()
                 }
             }
             }

@@ -18,7 +18,19 @@ struct ContentView: View {
         NavigationView{
             List{
                 ForEach(expenses.items) {item in
-                    Text(item.name)
+                    
+                    HStack{
+                        
+                        //leading will make the views to be aligned at the start of the view.
+                        VStack(alignment: .leading){
+                            Text(item.name)
+                                .font(.headline)
+                            Text(item.type)
+                        }
+                        Spacer()
+                        Text(item.amount, format: .currency(code: "USD"))
+                        
+                    }
                 }
                 .onDelete(perform: removeItems)
             }
